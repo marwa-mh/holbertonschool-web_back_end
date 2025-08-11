@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
+"""Method to return the index range, class Server"""
 import csv
 import math
 from typing import List
-"""Method to return the index range, class Server"""
 
 
 def index_range(page: int, page_size: int):
