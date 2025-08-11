@@ -48,6 +48,10 @@ class Server:
     """
     def get_hyper(self, page: int = 1, page_size: int = 10) -> dict:
         """get hyper method"""
+        if isinstance(page, float) and page.is_integer():
+            page = int(page)
+        if isinstance(page_size, float) and page_size.is_integer():
+            page_size = int(page_size)
         if not isinstance(page, int) or not isinstance(page_size, int):
             raise AssertionError("The value should be integer")
         data = self.get_page(page, page_size)
