@@ -47,6 +47,9 @@ class Server:
     total_pages: the total number of pages in the dataset as an integer
     """
     def get_hyper(self, page: int = 1, page_size: int = 10) -> dict:
+        """get hyper method"""
+        if not isinstance(page, int) or not isinstance(page_size, int):
+            raise AssertionError("The value should be integer")
         data = self.get_page(page, page_size)
         result = dict()
         result["page_size"] = len(data)
