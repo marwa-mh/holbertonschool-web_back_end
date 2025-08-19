@@ -1,7 +1,7 @@
 /* eslint-disable */
 export default function appendToEachArrayValue(array, appendString) {
-  for (const [idx, value] of array.entries()) {
-    array[idx] = appendString + value;
+  for (const [key, value] of array.entries()) {
+    array[key] = appendString + value;
   }
   return array;
 }
