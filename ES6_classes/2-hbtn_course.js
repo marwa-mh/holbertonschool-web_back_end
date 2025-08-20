@@ -47,7 +47,7 @@ export default class HolbertonCourse {
   }
 
   validateStudents(students) {
-    if (!Array.isArray(students) || !students.every(s => typeof s === 'string')) {
+    if (!Array.isArray(students) || !students.every((s) => typeof s === 'string')) {
       throw new TypeError('Students must be an array of strings');
     }
     this._students = students;
