@@ -45,4 +45,11 @@ export default class HolbertonCourse {
       throw new Error('TypeError: Length must be a number');
     }
   }
+
+  validateStudents(students) {
+    if (!Array.isArray(students) || !students.every(s => typeof s === 'string')) {
+      throw new TypeError('TypeError: Students must be an array of strings');
+    }
+    this._students = students;
+  }
 }
