@@ -1,4 +1,4 @@
-export default function cleanSet(set, startString) {
+export default function cleanSet(set, startString ='') {
     if (startString.trim().length === 0) return '';
   let result = [];
   for (let value of set){
