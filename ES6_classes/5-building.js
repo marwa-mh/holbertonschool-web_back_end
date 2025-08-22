@@ -1,7 +1,9 @@
 export default class Building {
-    constructor(sqft) {
-        this._sqft = sqft;
-        if (
+  constructor(sqft) {
+    this._sqft = sqft;
+
+    // Ensure that any subclass implements evacuationWarningMessage
+    if (
       this.constructor !== Building &&
       this.evacuationWarningMessage === undefined
     ) {
@@ -9,17 +11,10 @@ export default class Building {
         'Class extending Building must override evacuationWarningMessage'
       );
     }
-    }
+  }
 
-    get sqft() {
-        return this._sqft;
-    }
-
-    set sqft(sqft) {
-        this.validateAndAssignSqft(sqft);
-    }
-
-    
-
-    
+  // Getter for sqft
+  get sqft() {
+    return this._sqft;
+  }
 }
