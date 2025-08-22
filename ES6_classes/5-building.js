@@ -1,7 +1,6 @@
 export default class Building {
     constructor(sqft) {
-        
-        this.validateAndAssignSqft(sqft);
+        this._sqft = sqft;
         if (
       this.constructor !== Building &&
       this.evacuationWarningMessage === undefined
@@ -20,13 +19,7 @@ export default class Building {
         this.validateAndAssignSqft(sqft);
     }
 
-    validateAndAssignSqft(sqft) {
-      if (typeof sqft === 'number') {
-      this._sqft = sqft;
-    } else {
-      throw new TypeError('sqft must be a number');
-    }
-    }
+    
 
     
 }
